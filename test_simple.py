@@ -2,6 +2,7 @@
 def add(a: int, b: int) -> int:
     return a + b
 
+
 # 테스트 코드
 def test_add() -> None:
     # Given : 재료 준비
@@ -14,4 +15,3 @@ def test_add() -> None:
     assert result == 2
     if not result == 2:
         raise AssertionError
-
