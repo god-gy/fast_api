@@ -11,6 +11,12 @@ fastapi = "^0.121.2"
 uvicorn = "^0.38.0"
 orjson = "3.10.12"
 sqids = "0.5.1"
+tortoise-orm = {version = "0.23.0", extras = ["asyncmy"]}
+cryptography = "44.0.0"
+aerich = "0.8.1"
+tomlkit = "0.13.2"
+pydantic-settings = "2.7.1"
+poetry-core = "^2.2.1"
 
 
 [tool.poetry.group.dev.dependencies]
