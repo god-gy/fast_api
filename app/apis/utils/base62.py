@@ -19,7 +19,3 @@ class Base62:
             num, remainder = divmod(num, cls.BASE_LEN)
             result.append(cls.BASE[remainder])
         return "".join(result)
-
-
-print(Base62.encode(62))  # "ab"
-print(Base62.encode(124))  # "ac"

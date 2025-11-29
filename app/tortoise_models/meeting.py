@@ -4,6 +4,7 @@ from tortoise import Model, fields
 
 from app.tortoise_models.base_model import BaseModel
 
+
 class MeetingModel(BaseModel, Model):
     url_code = fields.CharField(max_length=255, unique=True)
 
