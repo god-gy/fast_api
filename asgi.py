@@ -1,7 +1,5 @@
 from app import app
 
-print("나는 app/asgi.py야", __name__)
-
 if __name__ == "__main__":
     import uvicorn
 
