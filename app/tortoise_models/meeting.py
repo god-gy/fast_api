@@ -24,3 +24,7 @@ class MeetingModel(BaseModel, Model):
     @classmethod
     async def get_by_url_code(cls, url_code: str) -> MeetingModel | None:
         return await cls.filter(url_code=url_code).get_or_none()
+
+    @classmethod
+    async def update_start_and_end(cls, url_code: str, start_date: date, end_date: date) -> None:
+        await cls.filter(url_code=url_code).update(start_date=start_date, end_date=end_date)
