@@ -11,11 +11,15 @@ from app.tortoise_models.participant import ParticipantModel
 
 class ParticipantDateModel(BaseModel, Model):
     participant: fields.ForeignKeyRelation[ParticipantModel] = fields.ForeignKeyField(
-        "models.ParticipantModel", related_name="participant_dates", db_constraint=False
+        "models.ParticipantModel",
+        related_name="participant_dates",
+        db_constraint=False,
+        index=True,
     )
     date = fields.DateField()
     enabled = fields.BooleanField(default=True)
     starred = fields.BooleanField(default=False)
+    participants: list[ParticipantModel]
 
     class Meta:
         table = "participant_dates"
